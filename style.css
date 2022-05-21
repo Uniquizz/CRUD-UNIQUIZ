@@ -1,0 +1,457 @@
+
+:root {
+    --primary: #2C2335;
+    --secondary: #FF3860;
+    --tertiary: #15EB59;
+    --blue:#3399BB;
+    --white:#FFFBFB;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+   
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0px;
+}
+
+body{
+    background-color: var(--primary);
+}
+
+/*Estilos grales */
+input, textarea {
+    background-color: #413C46;
+    border: solid .5px #FFFBFB;
+    border-radius: 8px;
+    color: var(--white);
+    padding: 20px 15px;
+    resize: none;
+    box-sizing: border-box;
+    font-size: 20px;
+    
+}
+
+input{
+    min-height: 32px;
+}
+textarea,input:focus{
+    border: 1px solid var(--blue);
+    outline: none;
+}
+
+
+/*// BTNS/// */
+
+
+.buttons{
+    font-display: flex;
+    text-align: right;
+    
+    margin-top: 2em;
+}
+.primary-btn{
+background-color:  var(--blue);
+  border: 1px solid #0077CC;
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  direction: ltr;
+  font-size: 1em;
+  min-width: 8em;
+  overflow: visible;
+  padding: 8px 30px;
+  text-align: center;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  margin-right: 5px;
+
+
+}
+.primary-btn:disabled{
+    cursor: default;
+    opacity: .3;  
+}
+
+
+.primary-btn:hover{
+    background-color: var(--blue);
+    border-color: #1482D0;
+    text-decoration: none; 
+}
+
+.primary-btn:active{
+    background-color: var(--blue);
+    opacity: .8;
+    outline: none;
+
+}
+
+.primary-btn:focus{
+    box-shadow: rgba(131, 192, 253, 0.5) 0 0 0 3px;
+  outline: none;
+}
+
+.secondary-btn{
+    background-color:  var(--tertiary);
+  border: 1px solid #0077CC;
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: var(--primary);
+  cursor: pointer;
+  direction: ltr;
+  font-size: 1em;
+  min-width: 8em;
+  overflow: visible;
+  padding: 8px 30px;
+  text-align: center;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+
+}
+
+.secondary-btn:disabled{
+    cursor: default;
+    opacity: .3;  
+}
+
+
+.secondary-btn:hover{
+    background-color: var(--tertiary);
+    border-color: #1482D0;
+    text-decoration: none; 
+}
+
+.secondary-btn:active{
+    background-color: var(--tertiary);
+    opacity: .8;
+    outline: none;
+
+}
+
+.secondary-btn:focus{
+    box-shadow: rgba(131, 192, 253, 0.5) 0 0 0 3px;
+  outline: none;
+}
+
+
+
+/* Aqui terminan Estilos grales */
+
+/*//////////////////////////////////////////////*/
+
+
+
+
+.category{
+   color:  var(--white);
+    display: flex;
+    font-size: 1.1em;
+    margin: 0em;
+    padding: 1em 3em 0em 3em;
+    margin-bottom: 1.8em;
+   
+}
+/*Mediaquery Responsive .welcome*/
+
+@media only screen and (max-width: 600px) {
+    .category {
+    
+        font-size: .7em;
+    
+    }
+    .category > h1{
+        font-size: 1.9em;
+        margin-top: .5em;
+    }
+   
+  }
+
+
+
+
+.welcome{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em  3em 0em 3em;
+    color: var(--white);
+    margin-bottom: 1em;
+}
+
+/*Mediaquery Responsive .welcome*/
+
+@media only screen and (max-width: 600px) {
+    .welcome {
+        justify-content: space-between;
+        font-size: .7em;
+    
+    }
+  }
+
+
+
+
+
+.table-work{
+    display: flex;
+    padding: 0em 2em 0em 2em;
+    color: var(--white);
+    
+}
+/*Mediaquery Responsive table-work */
+
+@media only screen and (max-width: 600px) {
+    .table-work {
+      display: block;
+      padding: 0em 1em 0em .3em;
+    }
+  }
+
+
+.form{
+    width: 100%;
+    
+    
+
+}
+.copie{
+    font-size: 1.3em;
+    color: #FFFBFB;
+    opacity: .8;
+    padding-left: 10px;
+    
+  
+}
+
+/*Mediaquery Responsive .copie */
+
+@media only screen and (max-width: 600px) {
+    .copie {
+      margin-right: 0em;
+      font-size: 13px;
+    }
+  }
+
+
+
+
+i{
+    color: var(--tertiary);
+    padding-top: .6em;
+    margin-left: 20px;
+}
+
+.form-container{
+    padding: 2em;
+    margin-top: 1em;
+    border-radius: 8px;
+    background-color: #413C46;
+    width: 85%;
+    
+    
+
+}
+
+
+
+
+
+
+.header-form{
+    display: flex;
+    justify-content: space-between;
+    background-color: #413C46;
+    margin: .5em 0em 1.5em 0em;
+  
+    
+    
+}
+
+.selectMateria{
+    width: 30vw;
+    height:8vh;
+    background: none;
+    color: #f2f2f2;
+    font-size: 1.5em;
+    border-radius: 8px;
+    border: solid 0.5px #FFFBFB;
+    height: 2.7em;
+
+}
+
+.selectArea{
+    text-align: center;
+    width: 4em;
+    height: 8vh;
+    background: none;
+    color: #f2f2f2;
+    font-size: 1.5em;
+    border-radius: 8px;
+    border: solid 0.5px #FFFBFB;
+    height: 2.7em;
+}
+.selectArea option{
+    background-color: var(--primary);
+    font-size: 1em;
+   
+}  
+
+
+.selectMateria option{
+    background-color: var(--primary);
+    font-size: 1em;
+   
+}  
+
+
+/*Mediaquery Select responsive mobile */
+
+@media only screen and (max-width: 600px) {
+    .selectMateria {
+      width: 85%;
+      font-size: 1.5em;
+ 
+    }
+    
+.selectMateria option{
+    background-color: var(--primary);
+    font-size: .5em;
+   
+}  
+  }
+
+
+
+ 
+.numberInput{
+    width:  4em;
+
+}
+
+#Pregunta{
+    margin-bottom: 1.5em;
+}
+
+.upload-img{
+    width: 100%;
+    border: dashed 2px var(--white);
+    border-radius: 8px;
+    align-items: center;
+    text-align: center;
+    padding: 4em 0em 4em 0em;
+    margin: 0 0em 1.5em 0em;
+
+   
+}
+
+.preguntas{
+    margin: 1.5em 0em 1.5em 0em;
+    
+
+}
+.pregunta_unica{
+  margin-top: 1.5em;
+}
+
+/*///Listado de preguntas */
+.list{
+    overflow: scroll;
+    overflow-x:hidden;
+
+    max-height: 1200px;
+    width: 100%;
+ 
+}
+.list::-webkit-scrollbar {
+    width: 6px;
+  }
+  /* width */
+.list::-webkit-scrollbar {
+
+    width: 6px;
+  }
+  
+  /* Track */
+  .list::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(50, 50, 50); 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  .list::-webkit-scrollbar-thumb {
+    background:  #F5F5F5; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  .list::-webkit-scrollbar-thumb:hover {
+    background:  #F5F5F5; 
+  }
+  
+
+.copiesList{
+    display: flex; 
+  font-size: 2em;
+ 
+   
+
+   margin-top: 1em;
+}
+
+
+.copiesList >h3{
+    min-width: 15%;
+    text-align: center;
+
+}
+
+.copiesList >p{
+    min-width: 70% ;
+}
+
+
+.card-question{
+     display: flex;
+   align-items: center;
+   padding: 1.5em;
+   border: solid 1px var(--blue);
+   min-width: 40vw;
+   border-radius: 10px;
+   margin-top: 1.5em;
+   
+
+
+
+}
+
+.card-question >h3{
+    min-width: 10%;
+}
+
+.card-question >p{
+    min-width: 80% ;
+}
+
+.quitIcon{
+    color: #FF3860 !important;
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
