@@ -55,7 +55,6 @@ export const getAllData = async () =>{
   await get(child(dbRef, 'quiz')).then((snapshot) => {
     if (snapshot.exists()) {
       all = Object.values(snapshot.val());
-      console.log(all)
       answers = Object.values(all[0]);
       areas = Object.values(all[1]);
       images = Object.values(all[2]);
@@ -74,7 +73,7 @@ export const getAllData = async () =>{
 }
   
 
-export const writeUserData = (Materia, Area, Img, Pregunta, RespuestaC, Respuesta1, Respuesta2, Respuesta3, Id) =>{
+export const writeUserData = (Materia, Area, Img, Pregunta, RespuestaC, Respuesta1, Respuesta2, Respuesta3) =>{
 
   const questionListRef = ref_database(database, QUESTIONS_URL);
   const addQuestionRef = push(questionListRef);

@@ -1,14 +1,16 @@
 import {getQ, saveQ, onSnapshot,collection,db, writeUserData, getAllData} from './firebase.js';
+
+
 const Qform = document.getElementById('Qform')
-
-
 const ContainerQ = document.getElementById('List-Container')
+
+
 
 window.addEventListener('DOMContentLoaded', async () =>{
   let html ="";
 
-  const { questions } = await getAllData();
-  console.log(questions)
+  const { questions, ids } = await getAllData();
+  console.log(ids)
   //const Questions= await getQ()
   questions.forEach((el, index) =>{
 
@@ -16,7 +18,7 @@ window.addEventListener('DOMContentLoaded', async () =>{
     <div class="card-question" style=" justify-content:space-between;">
       <h3>${index}</h3>
       <p class="">${el.pregunta} </p>
-      <i onclick={removeQuestion} class="fa-solid fa-circle-xmark fa-xl quitIcon"></i>
+      <i onclick={removeQuestion()} class="fa-solid fa-circle-xmark fa-xl quitIcon"></i>
     </div>
     `
   } )
@@ -24,9 +26,6 @@ window.addEventListener('DOMContentLoaded', async () =>{
   ContainerQ.innerHTML=html;
 });
 
-function removeQuestion () {
-
-}
 
 
 Qform.addEventListener('submit', (e) => {
